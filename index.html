@@ -5,64 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+    </script>
 </head>
-<body class="bg-gradient-to-r from-purple-500 to-pink-500 min-h-screen text-white">
-    <nav class="flex justify-between items-center p-6 bg-white shadow-lg text-gray-900">
+<body class="bg-red-200 min-h-screen text-white">
+    <nav class="flex justify-between items-center p-6 bg-white shadow-lg text-gray-900 relative">
         <div class="text-2xl font-bold flex items-center gap-2">
-            <span class="text-purple-500"></span> Arthittaya Portfolio
+            <span class="text-red-500"></span> Arthittaya Portfolio
         </div>
-        <ul class="flex gap-6 font-semibold">
-            <li><a href="#" class="hover:text-purple-500">Home</a></li>
-            <li><a href="#" class="hover:text-purple-500">Resume</a></li>
-            <li><a href="#" class="hover:text-purple-500">Portfolio</a></li>
-            
+        
+        <ul class="hidden md:flex gap-6 font-semibold">
+            <li><a href="#" class="hover:text-red-500">Home</a></li>
+            <li><a href="#" class="hover:text-red-500">Resume</a></li>
+            <li><a href="#" class="hover:text-red-500">Portfolio</a></li>
+        </ul>
+        
+       
+        <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+            <span class="text-3xl">&#9776;</span>
+        </button>
+        
+        
+        <ul id="mobile-menu" class="absolute top-16 left-0 w-full bg-white shadow-md hidden flex flex-col text-center text-gray-900 md:hidden">
+            <li class="border-b py-2"><a href="#" class="hover:text-red-500">Home</a></li>
+            <li class="border-b py-2"><a href="#" class="hover:text-red-500">Resume</a></li>
+            <li class="border-b py-2"><a href="#" class="hover:text-red-500">Portfolio</a></li>
         </ul>
     </nav>
     
     <header class="flex flex-col md:flex-row items-center px-10 py-20">
         <div class="md:w-1/2">
-            <h1 class="text-4xl font-light">I am <span class="font-bold text-yellow-300">Arthittaya Phophon.</span></h1>
-            <p class="mt-2">6640011061 | Web Programming | Information Technology</p>
-            
-            
+            <h1 class="text-4xl font-light text-black">I am <span class="font-bold text-pink-800">Arthittaya Phophon.</span></h1>
+            <p class="mt-2 text-black">6640011061 | Web Programming | Information Technology</p>
         </div>
         <div class="md:w-1/2 flex justify-center mt-6 md:mt-0">
             <img src="src/image/Me.jpg" alt="Profile" class="w-full max-w-md rounded-lg shadow-lg">
         </div>
     </header>
-
     <section class="px-10 py-16">
-        <h2 class="text-3xl font-semibold text-center mb-10">My Portfolio</h2>
+        <h2 class="text-3xl font-semibold text-center mb-10 text-black">My Portfolio</h2>
         <div class="grid md:grid-cols-3 gap-6">
             <div class="bg-white p-6 rounded-lg shadow-lg text-gray-900 hover:scale-105 transition-transform">
                 <img src="src/image/いちごカップケーキ.jpg" alt="Web Programming" class="rounded-md mb-4">
                 <h3 class="font-semibold">Strawberry Cupcakes</h3>
                 <p class="text-gray-600">いちごカップケーキ</p>
-                <a href="src/Ex1Menu.html" class="mt-4 block bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-purple-600 text-center">View More</a>
+                <a href="src/Ex1Menu.html" class="mt-4 block bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 text-center">View More</a>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg text-gray-900 hover:scale-105 transition-transform">
                 <img src="src/image/เเบบฟอม.png" alt="Digital Marketing" class="rounded-md mb-4">
                 <h3 class="font-semibold">เเบบสอบถาม</h3>
                 <p class="text-gray-600">ลงทะเบียนศิษย์เก่า IT + IS</p>
-                <a href="src/ex2from.html" class="mt-4 block bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-purple-600 text-center">View More</a>
+                <a href="src/ex2from.html" class="mt-4 block bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 text-center">View More</a>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg text-gray-900 hover:scale-105 transition-transform">
                 <img src="src/image/Music.jpg" alt="Data Science" class="rounded-md mb-4">
                 <h3 class="font-semibold">Music school</h3>
                 <p class="text-gray-600">music school</p>
-                <a href="src/Ex3Music.html" class="mt-4 block bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-purple-600 text-center">View More</a>
+                <a href="src/Ex3Music.html" class="mt-4 block bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 text-center">View More</a>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg text-gray-900 hover:scale-105 transition-transform">
-                <img src="src/image/Music.jpg" alt="Media Design" class="rounded-md mb-4">
+                <img src="src/image/ชีสเค้ก.jpg" alt="Media Design" class="rounded-md mb-4">
                 <h3 class="font-semibold">Strawberry Cheesecake</h3>
                 <p class="text-gray-600">No-Bake Strawberry Cheesecake</p>
-                <a href="src/Ex4NewMenu.html" class="mt-4 block bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-purple-600 text-center">View More</a>
+                <a href="src/Ex4NewMenu.html" class="mt-4 block bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 text-center">View More</a>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg text-gray-900 hover:scale-105 transition-transform">
                 <img src="src/image/Validation.jpg" alt="App Development" class="rounded-md mb-4">
-                <h3 class="font-semibold">Cloning Web CNN</h3>
-                <p class="text-gray-600">CNN</p>
-                <a href="src/Ex5From Validation.html" class="mt-4 block bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-purple-600 text-center">View More</a>
+                <h3 class="font-semibold">From </h3>
+                <p class="text-gray-600">From Validation</p>
+                <a href="src/Ex5From Validation.html" class="mt-4 block bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 text-center">View More</a>
             </div>
         </div>
     </section>
