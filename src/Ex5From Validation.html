@@ -11,35 +11,28 @@
 <div class="w-full max-w-sm bg-white p-6 rounded-lg shadow-md">
     <h2 class="text-2xl font-bold text-center mb-4">Login</h2>
     <form id="loginForm">
-        <div class="mb-4">
-            <label for="username" class="block text-gray-700 font-semibold">Username</label>
-            <input type="text" id="username" name="username" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <p id="usernameError" class="text-red-500 text-sm mt-1"></p>
-        </div>
-
-        <div class="mb-4">
-            <label for="password" class="block text-gray-700 font-semibold">Password</label>
-            <input type="password" id="password" name="password" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <p id="passwordError" class="text-red-500 text-sm mt-1"></p>
-        </div>
-
-        <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">Login</button>
+     <div class="mb-4">
+    <label for="username" class="block text-gray-700 font-semibold">Username</label>
+    <input type="text" id="username" name="username" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+    <p id="usernameError" class="text-red-500 text-sm mt-1"></p>
+</div>
+<div class="mb-4">
+    <label for="password" class="block text-gray-700 font-semibold">Password</label>
+    <input type="password" id="password" name="password" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+    <p id="passwordError" class="text-red-500 text-sm mt-1"></p></div>
+    <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">Login</button>
     </form>
 </div>
 
 <script>
-    document.getElementById("loginForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        let isValid = true;
-        let username = document.getElementById("username").value;
-        let password = document.getElementById("password").value;
-        let usernameError = document.getElementById("usernameError");
-        let passwordError = document.getElementById("passwordError");
-
-        usernameError.textContent = "";
-        passwordError.textContent = "";
-
+document.getElementById("loginForm").addEventListener("submit", function(event) {event.preventDefault();
+ let isValid = true;
+let username = document.getElementById("username").value;
+let password = document.getElementById("password").value;
+let usernameError = document.getElementById("usernameError");
+let passwordError = document.getElementById("passwordError");
+usernameError.textContent = "";
+ passwordError.textContent = "";
         if (username.length < 8) {
             usernameError.textContent = "Username must be at least 8 characters!";
             isValid = false;
@@ -48,13 +41,10 @@
             passwordError.textContent = "Please enter your password!";
             isValid = false;
         }
-
         if (isValid) {
             alert("Login successful!");
-            this.submit();
-        }
-    });
+            this.submit();}
+});
 </script>
-
 </body>
 </html>
